@@ -1,0 +1,71 @@
+name: unity_wallet
+description: "A secure and user-friendly Flutter wallet app connected to Google Sheets for data storage."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  # Updated minimum stable Dart SDK version
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Standard packages
+  http: ^1.2.0 # Updated to latest major version for better security/performance
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.2.2 # Updated to latest stable version
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Updated lints to the recommended standard Flutter version
+  flutter_lints: ^3.0.0 
+  
+  # App Icon & Splash Screen packages
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.11
+
+# ---------------- FLUTTER ----------------
+# ---------------- FLUTTER ----------------
+flutter:
+  uses-material-design: true
+
+  # 1. Fonts must have their own top-level 'fonts:' key
+  fonts:
+    - family: MarathiFont
+      fonts:
+        - asset: assets/fonts/TiroDevanagariMarathi-Regular.ttf
+          # If this is a Regular font file, weight should be 400. 
+          # Use 700 only if the file itself is a "Bold" version.
+          weight: 400 
+
+  # 2. General assets (images) go under the 'assets:' key
+  assets:
+    - assets/image/
+# ---------------- APP ICON CONFIGURATION ----------------
+flutter_launcher_icons:
+  # The logo PNG file should now have the white background baked in.
+  image_path: "assets/image/logo.jpeg" 
+  android: true
+  ios: true
+
+  
+  # NOTE: To avoid the Android circular mask on newer Android versions 
+  # and force the image's original shape, your approach is correct:
+  # Do not include the 'adaptive_icon_background' and 'adaptive_icon_foreground' keys.
+  # This makes the tool use the 'image_path' for both legacy and newer icons.
+
+# ---------------- SPLASH SCREEN CONFIGURATION ----------------
+flutter_native_splash: 
+  # FIX: Sets the full-screen background color to White.
+  color: "#FFFFFF" 
+  
+  # The image path is correct
+  image: "assets/image/logo.jpeg" 
+  android_gravity: fill
+  ios_content_mode: scaleAspectFill 
+  
+  fullscreen: true
+  
