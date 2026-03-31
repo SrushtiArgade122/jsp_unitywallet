@@ -40,9 +40,3 @@ The app follows a three-tier serverless architecture:
 
 ---
 
-## 📄 Installation & Build
-To run this project locally:
-
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/SrushtiArgade122/jsp_unitywallet.git](https://github.com/SrushtiArgade122/jsp_unitywallet.git)
