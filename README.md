@@ -39,4 +39,8 @@ The app follows a three-tier serverless architecture:
 
 
 ---
+## 👩‍💻 Author
 
+**Srushti Argade**
+
+---
